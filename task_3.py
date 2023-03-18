@@ -1,5 +1,5 @@
-positiveInteger = int( input( 'Введите целое положительное число: ' ))
-numb1 = positiveInteger * 2
-numb2 = positiveInteger * 3
+positive_integer = int(input('Введите целое положительное число: '))
+numb1 = positive_integer * 2
+numb2 = positive_integer * 3
 
-print(f'{positiveInteger}{numb1}{numb2}')
+print(str(positive_integer) + str(numb1) + str(numb2))
