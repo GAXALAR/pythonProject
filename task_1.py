@@ -1,6 +1,13 @@
-first_name = input('Введите имя: ')
-second_name = input('Введите фамилию: ')
-user_password = input('Задайте пароль: ')
-age = input('Введите ваш возраст: ')
-
-print(f"Данные аккаунта: имя - {first_name}, фамилия - {second_name}, пароль - {user_password}, возраст - {age} лет")
+n = int(input())
+count_zero = 0
+count_one = 0
+for i in range(n):
+    x = int(input())
+    if x == 0:
+        count_zero += 1
+    else:
+        count_one += 1
+if count_one > count_zero:
+    print(count_zero)
+else:
+    print(count_one)
