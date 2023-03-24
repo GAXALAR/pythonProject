@@ -1,13 +1,26 @@
-n = int(input())
-count_zero = 0
-count_one = 0
-for i in range(n):
-    x = int(input())
-    if x == 0:
-        count_zero += 1
-    else:
-        count_one += 1
-if count_one > count_zero:
-    print(count_zero)
+
+# list_1 = ['зима', 'зима', 'весна', 'весна', 'весна', 'лето', 'лето', 'лето', 'осень', 'осень', 'осень', 'зима']
+
+
+my_dict = {1:'зима',
+           2:'зима',
+           3:'весна',
+           4:'весна',
+           5:'весна',
+           6:'лето',
+           7:'лето',
+           8:'лето',
+           9:'осень',
+           10:'осень',
+           11:'осень',
+           12:'зима'}
+
+
+month = int(input('введите номер месяца: '))
+if month < 1 or month > 12:
+    print('в году только 12 месяцев')
 else:
-    print(count_one)
+#   print(list_1[month - 1])
+
+
+    print(my_dict[month])
