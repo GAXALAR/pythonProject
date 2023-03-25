@@ -1,26 +1,19 @@
-
-# list_1 = ['зима', 'зима', 'весна', 'весна', 'весна', 'лето', 'лето', 'лето', 'осень', 'осень', 'осень', 'зима']
-
-
-my_dict = {1:'зима',
-           2:'зима',
-           3:'весна',
-           4:'весна',
-           5:'весна',
-           6:'лето',
-           7:'лето',
-           8:'лето',
-           9:'осень',
-           10:'осень',
-           11:'осень',
-           12:'зима'}
-
-
-month = int(input('введите номер месяца: '))
-if month < 1 or month > 12:
-    print('в году только 12 месяцев')
-else:
-#   print(list_1[month - 1])
-
-
-    print(my_dict[month])
+mol = [int(x) for x in input().split()]
+n = mol[0]
+m = mol[1]
+set_1 = set()
+set_2 = set()
+list_1 = list()
+a = [int(x) for x in input().split()]
+k = set(a)
+for i in k:
+    set_1.add(i)
+b = [int(x) for x in input().split()]
+k1 = set(b)
+for i in k1:
+    set_2.add(i)
+lok = set_1 & set_2
+kool = list(lok)
+kool.sort()
+for i in kool:
+    print(i, end=' ')
