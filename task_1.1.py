@@ -28,7 +28,6 @@ def calc():
         return calc()
 
 
-
 print(calc())
 
 

@@ -6,6 +6,5 @@ def sum_elem(n):
         x = -x
     return sum_elem(n - 1) + x
 
-
 number = int(input())
 print(sum_elem(number))
