@@ -17,7 +17,6 @@ def guess_num(attempts = 1):
             print('возьми медальку с полочки, ты угадал')
     else:
         print(f'Хватит, я загадал число: {r}')
-
 print(guess_num())
 
 

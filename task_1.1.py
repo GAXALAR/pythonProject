@@ -26,8 +26,6 @@ def calc():
     else:
         print('Вы ввели неверный символ, попробуйте еще раз')
         return calc()
-
-
 print(calc())
 
 

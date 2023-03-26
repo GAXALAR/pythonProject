@@ -7,6 +7,5 @@ def user_number(x, reverse = 0):
         reverse = reverse * 10
         reverse = reverse + cur_nmb
         return user_number(x, reverse)
-
 x = int(input("Введите число: "))
 user_number(x)

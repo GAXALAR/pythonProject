@@ -9,6 +9,5 @@ def user_number(x, even=0, odd=0):
         else:
             odd += 1
         return user_number(x, even, odd)
-
 x = int(input("Введите число: "))
 user_number(x)
