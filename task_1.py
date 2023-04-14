@@ -1,10 +1,17 @@
-# Заполните массив элементами арифметической прогрессии.
-# Её первый элемент, разность и количество элементов нужно ввести с клавиатуры.
-# Формула для получения n-го члена прогрессии: an = a1 + (n-1) * d.
-# Каждое число вводится с новой строки.
+class Descriptor:
+    def __init__(self, name):
+        self.name = name
 
-a1 = int(input())
-d = int(input())
-n = int(input())
-for i in range(n):
-    print(a1 + i * d)
+    def __get__(self, instance, owner):
+        return instance.__dict__.get(self.name)
+
+    def __set__(self, instance, value):
+        instance.__dict__[self.name] = value
+
+class MyClass1:
+    name = Descriptor('name')
+    age = Descriptor('age')
+
+class MyClass2:
+    city = Descriptor('city')
+    country = Descriptor('country')
