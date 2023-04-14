@@ -1,17 +1,23 @@
-class Descriptor:
-    def __init__(self, name):
-        self.name = name
+import time
 
-    def __get__(self, instance, owner):
-        return instance.__dict__.get(self.name)
+class TrafficLight:
+    def __init__(self):
+        self.__color = "red"
 
-    def __set__(self, instance, value):
-        instance.__dict__[self.name] = value
+    def running(self):
+        while True:
+            if self.__color == "red":
+                print("Red light")
+                time.sleep(7)
+                self.__color = "yellow"
+            elif self.__color == "yellow":
+                print("Yellow light")
+                time.sleep(2)
+                self.__color = "green"
+            else:
+                print("Green light")
+                time.sleep(5)
+                self.__color = "red"
 
-class MyClass1:
-    name = Descriptor('name')
-    age = Descriptor('age')
-
-class MyClass2:
-    city = Descriptor('city')
-    country = Descriptor('country')
+traffic_light = TrafficLight()
+traffic_light.running()
